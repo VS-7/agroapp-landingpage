@@ -157,7 +157,7 @@ export const Pricing = () => {
               </motion.p>
 
               <motion.button 
-                className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors mb-8"
+                className="w-full bg-green-500 text-white border-1 border-green-600 py-3 rounded-lg hover:bg-green-600 transition-colors mb-8"
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 + (0.1 * index), duration: 0.4 }}

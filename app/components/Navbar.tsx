@@ -166,7 +166,7 @@ export const Navbar = () => {
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white rounded-lg shadow-lg">
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white rounded-lg ">
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -223,7 +223,7 @@ export const Navbar = () => {
                   >
                     <Link
                       href="#template"
-                      className="block px-3 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
+                      className="block px-3 py-2 bg-green-500 text-white text-center rounded-lg border-1 border-green-600 hover:bg-green-600"
                     >
                       Acessar Plataforma
                     </Link>

@@ -84,9 +84,8 @@ export const Features = () => {
     <section className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex gap-8">
-          {/* Aside Navigation */}
           <motion.aside 
-            className="w-64 flex-shrink-0"
+            className={`w-64 flex-shrink-0 hidden sm:block`}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
@@ -116,7 +115,6 @@ export const Features = () => {
             </nav>
           </motion.aside>
 
-          {/* Content */}
           <div className="flex-1">
             <div className="space-y-10 ">
               {features.map((feature, index) => {
@@ -164,7 +162,7 @@ export const Features = () => {
                         transition={{ delay: 0.4, duration: 0.5 }}
                         viewport={{ once: true }}
                       >
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                           <motion.div
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
