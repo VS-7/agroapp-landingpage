@@ -106,8 +106,8 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.6 }}
         >
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-2">
-            <div className="grid grid-cols-5 gap-2">
+          <div className="bg-white/10 backdrop-blur-lg border-1 border-white/30 rounded-xl p-2 mx-auto w-full sm:w-150 flex justify-around items-center">
+            <div className="grid grid-cols-5 gap-3">
               {tabs.map((tab, index) => {
                 const Icon = tab.icon;
                 return (
@@ -135,7 +135,7 @@ export const Hero = () => {
 
           {/* Tab Content Preview */}
           <motion.div 
-            className="mt-8 bg-white/10 backdrop-blur-lg rounded-xl p-6 transform transition-all duration-500 hover:scale-[1.02]"
+            className="mt-8 bg-white/10 backdrop-blur-lg p-6 border-1 border-white/30 rounded-xl w-full sm:w-220 h-80 sm:h-120 transform transition-all duration-500 hover:scale-[1.02]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.6 }}
@@ -145,7 +145,7 @@ export const Hero = () => {
                 {activeTab === 'fields' && (
                   <div className="grid grid-cols-2 gap-4 w-full">
                     <motion.div 
-                      className="bg-white/20 backdrop-blur-sm rounded-lg p-4 transition-all hover:scale-105"
+                      className="bg-white/20 backdrop-blur-sm rounded-lg p-6 transition-all hover:scale-105"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 1.7, duration: 0.5 }}
@@ -155,7 +155,7 @@ export const Hero = () => {
                       <p className="text-white/90">Soil Moisture: 56%</p>
                     </motion.div>
                     <motion.div 
-                      className="bg-white/20 backdrop-blur-sm rounded-lg p-4 transition-all hover:scale-105"
+                      className="bg-white/20 backdrop-blur-sm rounded-lg p-6 transition-all hover:scale-105"
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 1.8, duration: 0.5 }}
