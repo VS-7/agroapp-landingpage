@@ -33,7 +33,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen mx-auto flex items-center overflow-hidden">
       {/* Background Image with Parallax Effect */}
       <div 
         className="absolute inset-0 transition-transform duration-500 ease-out"
@@ -101,12 +101,12 @@ export const Hero = () => {
 
         {/* Tabs */}
         <motion.div 
-          className="max-w-4xl mx-auto"
+          className="max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.0, duration: 0.6 }}
         >
-          <div className="bg-white/10 backdrop-blur-lg border-1 border-white/30 rounded-xl p-2 mx-auto w-full sm:w-150 flex justify-around items-center">
+          <div className="bg-white/10 backdrop-blur-lg border-1 border-white/30 rounded-xl p-2 mx-auto w-full h-20 sm:w-115 flex justify-around items-center">
             <div className="grid grid-cols-5 gap-3">
               {tabs.map((tab, index) => {
                 const Icon = tab.icon;
@@ -114,7 +114,7 @@ export const Hero = () => {
                   <motion.button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`p-4 rounded-lg text-white transition-all hover:scale-105 ${
+                    className={`p-2 rounded-lg text-white transition-all hover:scale-105 h-15 ${
                       activeTab === tab.id
                         ? 'bg-white/20'
                         : 'hover:bg-white/10'
@@ -135,7 +135,7 @@ export const Hero = () => {
 
           {/* Tab Content Preview */}
           <motion.div 
-            className="mt-8 bg-white/10 backdrop-blur-lg p-6 border-1 border-white/30 rounded-xl w-full sm:w-220 h-80 sm:h-120 transform transition-all duration-500 hover:scale-[1.02]"
+            className="mt-8 bg-white/10 backdrop-blur-lg p-6 border-1 border-white/30 rounded-4xl w-full sm:w-220 h-80 sm:h-120 transform transition-all duration-500 hover:scale-[1.02]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.6 }}

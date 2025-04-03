@@ -20,7 +20,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-50 px-4 transition-all duration-200 ${
+    <div className={`fixed top-4 left-0 right-0 z-50 px-4 transition-all duration-200 ${
       isScrolled ? 'pt-4' : 'pt-0'
     }`}>
       <motion.nav 
@@ -34,7 +34,7 @@ export const Navbar = () => {
         transition={{ duration: 0.5 }}
       >
         <div className="mx-auto px-6">
-          <div className={`flex justify-around items-center transition-all duration-300 ${
+          <div className={`flex justify-between items-center transition-all duration-300 ${
             isScrolled ? 'h-12' : 'h-12'
           }`}>
             <motion.div 
@@ -56,7 +56,7 @@ export const Navbar = () => {
                 {!isScrolled && (
                   <motion.span 
                     className={`ml-2 font-semibold text-gray-700 transition-all duration-300 ${
-                      isScrolled ? 'text-2xl' : 'text-2xl'
+                      isScrolled ? 'text-3xl' : 'text-3xl'
                     }`}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -106,23 +106,19 @@ export const Navbar = () => {
                   Blog
                 </Link>
               </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  href="#template"
-                  className={`bg-green-500 border-1 border-green-600 font-semibold text-white rounded-xl hover:bg-green-600 transition-all duration-300 ${
-                    isScrolled ? 'px-4 py-1.5' : 'px-4 py-2 text-base'
-                  }`}
-                >
-                  Acessar Plataforma
-                </Link>
-              </motion.div>
             </div>
+
+            {/* Botão Acessar Plataforma separado */}
+            <motion.div className='flex justify-center items-center'>
+              <Link
+                href="#template"
+                className={`bg-green-500 border-1 border-green-600 font-semibold text-white rounded-xl hover:bg-green-600 transition-all duration-300 ${
+                  isScrolled ? 'px-4 py-1.5' : 'px-4 py-2 text-base'
+                }`}
+              >
+                Acessar Plataforma
+              </Link>
+            </motion.div>
 
             {/* Mobile Menu Button */}
             <motion.div 
@@ -166,11 +162,12 @@ export const Navbar = () => {
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white rounded-lg ">
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white rounded-lg flex flex-col space-y-2">
                   <motion.div
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1, duration: 0.3 }}
+                    className="flex justify-between"
                   >
                     <Link
                       href="#use-cases"
@@ -183,6 +180,7 @@ export const Navbar = () => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2, duration: 0.3 }}
+                    className="flex justify-between"
                   >
                     <Link
                       href="#about"
@@ -195,6 +193,7 @@ export const Navbar = () => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.3, duration: 0.3 }}
+                    className="flex justify-between"
                   >
                     <Link
                       href="#contact"
@@ -207,6 +206,7 @@ export const Navbar = () => {
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4, duration: 0.3 }}
+                    className="flex justify-between"
                   >
                     <Link
                       href="#blog"
@@ -220,6 +220,7 @@ export const Navbar = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.5, duration: 0.3 }}
                     whileHover={{ scale: 1.03 }}
+                    className="flex justify-between"
                   >
                     <Link
                       href="#template"
